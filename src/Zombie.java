@@ -62,12 +62,6 @@ public class Zombie extends JPanel {
                     collided = gp.getColliders()[i];
                 }
             }
-            if(gp.getBrain()!=null&&getPosX()<=20){
-                if(gp.getBrain()[myLane].assignedPlant != null){
-                    isCollides = true;
-                    collided = gp.getBrain()[myLane];
-                }
-            }
             if (!isCollides) {
             	isAttacking = false;
                 if (slowInt > 0) {

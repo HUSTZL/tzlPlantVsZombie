@@ -16,7 +16,6 @@ public class GamePanel extends JLayeredPane implements MouseMotionListener {
 
     // Collider grids have plants info
     private final Collider[] colliders;
-    private Collider[] brains;
 
     private final ArrayList<ArrayList<Zombie>> laneZombies;
     private final ArrayList<ArrayList<Pea>> lanePeas;
@@ -207,18 +206,6 @@ public class GamePanel extends JLayeredPane implements MouseMotionListener {
         g.drawImage(bgImage, 0, 0, null);
 
         g.drawImage(pauseImage, 860, 0, 140, 50, null);
-
-        //Draw brains
-        if(brains !=null){
-            for (int i = 0; i < 5 ; i++) {
-                Collider c = brains[i];
-                if (c.assignedPlant != null){
-                    Plant p = c.assignedPlant;
-                    g.drawImage(p.getImage(), 0, 129 + p.getY() * 120, null);
-                }
-            }
-        }
-
 
         // Draw Plants
         for (int i = 0; i < 45; i++) {
@@ -517,9 +504,5 @@ public class GamePanel extends JLayeredPane implements MouseMotionListener {
 
     public Collider[] getColliders() {
         return colliders;
-    }
-
-    public Collider[] getBrain() {
-        return brains;
     }
 }
