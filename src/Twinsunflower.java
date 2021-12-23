@@ -1,9 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-/**
- * Created by Armin on 6/28/2016.
- */
+
 public class Twinsunflower extends Plant {
 
     private Timer sunProduceTimer;
